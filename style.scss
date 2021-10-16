@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap");
+:root {
+  --green: #18aa79;
+  --black: #444;
+  --light-color: #777;
+  --box-shadow: 0.5rem 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.3);
+  --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+  --border: 0.2rem solid var(--green);
+  --white: #fff;
+}
+
+@import "mixins";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-in-out;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+.navbar {
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+nav i {
+  color: var(--green);
+  font-size: 2.8rem;
+  padding-right: 0.5rem;
+}
+.navbar span {
+  font-size: 1.7rem;
+  color: var(--black);
+}
+nav a {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  margin-left: 2.7rem;
+}
+.navbar ul li a {
+  color: var(--light-color);
+}
+.navbar-nav .nav-item .navbar ul li a:hover {
+  color: var(--green);
+}
+h1 {
+  @include h1;
+  padding-top: 3rem;
+}
+/***************************home***************************************/
+#Home {
+  background: rgb(235, 241, 241);
+  width: 100%;
+  height: 95vh;
+  img {
+    margin-top: 7rem;
+    width: 75%;
+  }
+}
+#Home .content {
+  margin: 10rem auto;
+  p {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+  .buttom {
+    @include buttoms;
+  }
+  .buttom span {
+    @include mainspan;
+  }
+  .buttom:hover {
+    @include hover;
+  }
+  .buttom:hover span {
+    @include span;
+  }
+}
+/*icon section*/
+.about {
+  .card {
+    max-width: 30rem;
+    height: 27rem;
+    border: 5px solid var(--green);
+    font-size: 2.6rem;
+    box-shadow: var(--box-shadow);
+    animation: aboutImage 4s linear infinite;
+  }
+  .card:hover {
+    color: var(--green);
+  }
+  h3 {
+    margin-top: 4rem;
+    font-weight: bold;
+    font-size: 5rem;
+    text-shadow: var(--text-shadow);
+  }
+  i {
+    font-size: 4.3rem;
+    color: var(--green);
+    margin-top: 2rem;
+  }
+}
+@keyframes aboutImage {
+  0%,
+  100% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+}
+/**buttoms part**/
+.buttom {
+  @include buttoms();
+}
+.buttom:hover {
+  @include hover;
+}
+.buttom:hover span {
+  @include span;
+}
+.buttom span {
+  @include mainspan;
+}
+/*8888888888888888888888888888service section8**************************************/
+#services {
+  background: rgb(235, 241, 241);
+  width: 100vw;
+  height: 100%;
+
+  h1 {
+    @include h1;
+  }
+}
+.service-sm-div {
+  margin-bottom: 5rem;
+  .card {
+    border: 4px solid var(--green);
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.7rem 2rem;
+  }
+  .icons {
+    font-size: 5rem;
+    padding: 0.6rem 3rem;
+    color: var(--green);
+  }
+  h3 {
+    font-weight: bold;
+    color: #000;
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+}
+/*************about us************/
+.big-photo {
+  img {
+    width: 85%;
+  }
+  .side {
+    font-size: 1.7rem;
+    margin-top: 6rem;
+  }
+}
+/********************doctors*********************************************/
+.doctor {
+  .card {
+    width: 26rem;
+    height: 38rem;
+    border: 2px solid var(--green);
+  }
+  .img {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--green);
+    padding: 1rem;
+  }
+  h3 {
+    padding-top: 2rem;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  span {
+    padding: 0.8rem;
+    color: var(--green);
+  }
+  i {
+    border: 2px solid var(--green);
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: var(--green);
+  }
+}
+/******************************booking section start**************************************************/
+.book img {
+  width: 90%;
+  height: 90%;
+  margin-top: 7rem;
+}
+.booking-section {
+  width: 50%;
+  height: 20rem;
+  margin-top: 10rem;
+}
+.booking-section h3 {
+  padding-bottom: 2rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.booking-section form {
+  background-color: #fff;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  border-radius: 0.7rem;
+}
+.booking-section form .box {
+  width: 100%;
+  margin: 0.7rem 0;
+  border-radius: 0.5rem;
+  border: var(--border);
+  color: var(--black);
+  text-transform: none;
+  padding: 1rem;
+}
+/***********************client********************************/
+
+/***********************client********************************/
+.review .card {
+  border: 2px solid var(--green);
+  height: 40rem;
+}
+.review .card img {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rem;
+}
+.review .card-text {
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+/********************************************media query************************************************/
+@media only screen and (max-width: 991px) {
+  html {
+    font-size: 50%;
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 200px) and (max-width: 360px) {
+  .content h1 {
+    margin-top: -12rem;
+  }
+}
